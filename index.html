@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Mi Princesita ✨</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Pantalla inicial -->
+  <section id="intro" class="pantalla activa">
+    <div class="contenido">
+      <h1>Mi Princesita 💖</h1>
+      <p>
+        Esto no es un regalo común.<br />
+        Es algo que no supe decir de una sola vez.
+      </p>
+      <button id="btnInicio">▶ Presiona play</button>
+    </div>
+  </section>
+
+  <!-- Escena de audios -->
+  <section id="escena" class="pantalla">
+    <div class="contenido">
+
+      <!-- AUDIO PRINCIPAL -->
+      <audio id="audio" playsinline webkit-playsinline></audio>
+
+      <!-- CONTROLES -->
+      <button id="play">▶ Reproducir</button>
+
+      <div class="barra-audio">
+  <div class="barra-fondo">
+    <div class="barra-progreso" id="barraProgreso"></div>
+  </div>
+</div>
+
+
+      <!-- TEXTO -->
+      <p id="texto"></p>
+
+      <!-- PISTA -->
+      <div id="pista" class="pista"></div>
+
+      <button id="siguiente">Seguir</button>
+    </div>
+  </section>
+
+  <!-- Final -->
+<section id="final" class="pantalla">
+  <div class="contenido final-contenido">
+
+    <div class="final-texto">
+      <h2>Feliz año nuevo</h2>
+      <p>
+        Mi princesita hermosa 🐤,<br />
+        gracias por existir en este pedacito de mi tiempo.<br /><br />
+        Te amo.<br />
+        Att: Tu Ingenierito 💖
+
+        <video id="videoFinal" controls playsinline>
+  <source src="videos/final.mp4" type="video/mp4">
+  Tu navegador no soporta video.
+</video>
+
+      </p>
+    </div>
+
+    <div class="final-video">
+      <video
+        src="videos/artificiales.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
+
+    <canvas id="fuegos"></canvas>
+  </div>
+</section>
+
+
+  <!-- Sonido ambiente -->
+  <audio id="vinilo" src="sonidos/vinilo.mp3" loop></audio>
+
+  <!-- CARTA MODAL -->
+  <div id="modalCarta" class="modal oculto">
+    <div class="carta">
+      <h3 id="cartaTitulo">💌</h3>
+      <p id="cartaMensaje"></p>
+      <div id="cartaFotos" class="fotos"></div>
+      <button id="cerrarCarta">Cerrar carta</button>
+    </div>
+  </div>
+
+  <!-- JS (SOLO UNA VEZ) -->
+  <script src="script.js"></script>
+</body>
+</html>
